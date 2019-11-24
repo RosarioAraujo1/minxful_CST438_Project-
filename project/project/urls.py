@@ -8,7 +8,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('userdash/', views.userdash),
     path("", views.homepage),
-    path('profile', views.profile),
+    path('login', views.login),
     path('forum', views.forum),
     path('admindash', views.admindash),
+    path('signup',views.signup),
 ]

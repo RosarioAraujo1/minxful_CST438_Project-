@@ -2,10 +2,13 @@
 from django.contrib import admin
 from django.urls import path
 from .import views
-import re
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.home),
+    path('userdash/', views.userdash),
     path("", views.homepage),
+    path('profile', views.profile),
+    path('forum', views.forum),
+    path('admindash', views.admindash),
 ]

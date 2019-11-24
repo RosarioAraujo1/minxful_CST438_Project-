@@ -25,6 +25,7 @@ class Reply(models.Model):
         print to make sure formatting works, in future should remove print and
         return only string so it can be used elseware."""
         nl = "\n"
+
         return print("{:<13}{!r} on {} at {}|{} {:^30}".format("replying to:",
         self.parent.title_text, self.pub_date, self.pub_time,nl,
         nl.join([self.body_text])))

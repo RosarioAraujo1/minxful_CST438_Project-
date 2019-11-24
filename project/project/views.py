@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 def userdash(request):
-    return HttpResponse("userdash")
+    return render(request, 'userdash.html')
 
 
 def homepage(request):
@@ -11,15 +11,15 @@ def homepage(request):
 
 
 def login(request):
-    return HttpResponse("login")
+    return render(request, 'login.html')
 
 
 def forum(request):
-    return HttpResponse("forum")
+    return render(request, 'forum.html')
 
 
 def admindash(request):
-    return HttpResponse("admindash")
+    return render(request, 'admin_dash.html')
 
 def signup(request):
-    return HttpResponse("signup")
+    return render(request, 'signup.html')

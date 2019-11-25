@@ -1,4 +1,5 @@
-django_project
+django_proj
+django_proj/*
 *pycache*
 *pycache*/*
 

@@ -19,4 +19,7 @@ Username:rosario
 password: 123456 
 
 # 12/1/19
+
+The posts are now being displayed onto the html page. This is being done by creating them through admin and then displaying them.
+
 You guys can use this login to check things the database tables. The tables are located in Models. The Post and Reply are the only tables that are included as of now

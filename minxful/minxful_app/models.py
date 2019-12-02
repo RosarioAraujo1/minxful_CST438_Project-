@@ -6,11 +6,14 @@ class Post(models.Model):
     """ a post class """
 
     title_text = models.CharField(max_length=200)
-    body_text = models.CharField(max_length=1000)
+    body_text = models.TextField()
     pub_date = models.DateTimeField("published")
 
     def __str__(self):
         return "{:^30} \n {:^30}".format(self.title_text, self.body_text)
+
+    def snippet(self):
+        return self.body_text[:20] + " ....."
 
 
 class Reply(models.Model):

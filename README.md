@@ -16,7 +16,8 @@ Look at the database section in settings.py to get name of db to create. To run,
 The admin User info
 
 Username:rosario 
-password: 123456 
+
+Password: 123456 
 
 # 12/1/19
 

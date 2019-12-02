@@ -2,7 +2,7 @@
 from django.contrib import admin
 from django.urls import path
 from minxful_app import views
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,3 +13,6 @@ urlpatterns = [
     path('admindash', views.admindash),
     path('signup',views.signup),
 ]
+
+
+urlpatterns += staticfiles_urlpatterns()

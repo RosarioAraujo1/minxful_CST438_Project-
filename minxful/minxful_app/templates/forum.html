@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Forum </title>
+</head>
+
+<body>
+
+<h1>Posts</h1>
+<div class ="posts">
+    {% for post in posts%}
+        <div class="post">
+            <h2><a href="#">{{post.title_text}}</a></h2>
+            <p>{{post.body_text}}</p>
+            <p>{{post.pub_date}}</p>
+        </div>
+
+    {% endfor %}
+</div>
+
+</body>
+
+
+
+</html>

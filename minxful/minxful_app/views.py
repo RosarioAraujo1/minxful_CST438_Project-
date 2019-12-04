@@ -3,7 +3,6 @@ from django.shortcuts import render
 from .models import Post
 
 
-
 def userdash(request):
     return render(request, 'userdash.html')
 
@@ -24,5 +23,10 @@ def forum(request):
 def admindash(request):
     return render(request, 'admin_dash.html')
 
+
 def signup(request):
     return render(request, 'signup.html')
+
+
+#def post_detail(request, slug):
+ #   return HttpResponse(slug)

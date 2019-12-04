@@ -1,10 +1,10 @@
 from django.urls import path
 from . import views
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
-        path('', views.index, name='index'),
-]
+    path('', views.index, name='index'),
+    #path(r'^(?P<slug>[\w-]+)/$', views.post_detail),
 
-urlpatterns += staticfiles_urlpatterns()
+
+]

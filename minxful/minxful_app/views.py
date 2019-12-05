@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Post
+
 
 
 def userdash(request):
@@ -15,7 +17,8 @@ def login(request):
 
 
 def forum(request):
-    return render(request, 'forum.html')
+    posts = Post.objects.all().order_by('pub_date')
+    return render(request, 'forum.html', {'posts': posts})
 
 
 def admindash(request):

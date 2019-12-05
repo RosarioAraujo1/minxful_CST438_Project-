@@ -1,4 +1,4 @@
-
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
 from minxful_app import views
@@ -12,6 +12,7 @@ urlpatterns = [
     path('forum', views.forum),
     path('admindash', views.admindash),
     path('signup',views.signup),
+    path('accounts/', include('accounts.urls')),
 ]
 
 

@@ -9,7 +9,8 @@ def userdash(request):
 
 
 def homepage(request):
-    return render(request, 'homepage.html')
+    posts = Post.objects.all().order_by('pub_date')
+    return render(request, 'homepage.html', {'posts': posts})
 
 
 def login(request):
@@ -17,8 +18,8 @@ def login(request):
 
 
 def forum(request):
-    posts = Post.objects.all().order_by('pub_date')
-    return render(request, 'forum.html', {'posts': posts})
+
+    return render(request, 'forum.html')
 
 
 def admindash(request):

@@ -1,29 +1,98 @@
-{% load static from staticfiles %}
-
-
+{% load static %}
 <!DOCTYPE html>
 
 <html>
 
 <head>
-    <title> Forum </title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  {% block head %}
+  <title>Minxful</title>
+  {% endblock %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 <body>
+  <header>
+    <div class="container clearfix">
 
-<h1>Posts</h1>
-<div class ="posts">
-    {% for post in posts%}
-        <div class="post">
-            <h2><a href="#">{{post.title_text}}</a></h2>
-            <p>{{post.snippet}}</p>
-            <p>{{post.pub_date}}</p>
+      <div class="navbar-wrapper">
+        <div class="container">
+          <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar_whole">
+
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <!--Insert the file name of your brand image below after the 'img'-->
+                <img class="img-responsive" src="">
+                <span> MINXFUL </span>
+              </a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="login">Login</a>
+                </li>
+                <li>
+                  <a href="signup">Signup</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
+      </div>
+    </div>
+  </header>
 
-    {% endfor %}
-</div>
+
+  <h1>Posts</h1>
+  <div class="content">
+    <div class="posts">
+      {% for post in posts%}
+      <div class="post">
+        <h2><a href="#">{{post.title_text}}</a></h2>
+        <p>{{post.snippet}}</p>
+        <p>{{post.pub_date}}</p>
+      </div>
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
+      <div class="navbar-text pull-left">
+      </div>
+      <div class="navbar-text pull-right">
+        <!-- Add in your social media / github links here -->
+        <a href="https://github.com/clarkdatalabs">
+          <i class="fa fa-github-square fa-2x"></i></a>
+      </div>
+      <!--Below is the copyright information for the site. You can fill in your own here.-->
+      <div class="navbar-text pull-left">
+        &copy; CST438 Software Engineering, 2019
+      </div>
+    </div>
+  </footer>
+
+
+  <!--This is my javascript block. If you've included the javascript files you need in the 'static' folder then there's no need to 
+put this here and you can delete the block below.-->
+  {% block head-javascript %}
+  <!-- <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+  {% endblock %}
 
 </body>
+
+
 
 
 

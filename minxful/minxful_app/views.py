@@ -11,6 +11,9 @@ def userdash(request):
 def homepage(request):
     posts = Post.objects.all().order_by('pub_date')
     return render(request, 'homepage.html', {'posts': posts})
+# def homepage(request):
+#     return render(request, 'homepage.html', {'posts': posts})
+
 
 
 def login(request):
@@ -18,7 +21,6 @@ def login(request):
 
 
 def forum(request):
-
     return render(request, 'forum.html')
 
 

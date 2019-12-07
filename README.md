@@ -32,3 +32,18 @@ Have created the assets folder to help with css, it's not working and i think it
 Also, i did notice the time of the database is off. We need to fix that.
 
 I need to fix the  path('forum', include('forum.urls')), this is not working. I have no idea why!
+
+# 12/7/19 - Pernille 
+
+To be able to run the application bootstrap much be installed. When the enviorment is active run this command: 
+pip install django-crispy-forms
+
+Make sure setting.py have this: 
+
+INSTALLED_APPS = [
+    ...
+
+    'crispy_forms',
+]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

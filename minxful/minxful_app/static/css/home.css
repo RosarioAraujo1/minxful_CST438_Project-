@@ -64,6 +64,12 @@ h1 {
     border-radius: 15px;
     float:right;
 }
+.createPost a {
+    text-decoration: none;
+}
+.post{
+    margin-bottom: 20px;
+}
 
 .post h2 a{
     color: black;
@@ -91,4 +97,13 @@ footer {
     flex-shrink: 0;
     height: 5%;
     text-align: center;
+    background-color: #d43f8d;
+    padding-top:30px;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .createPost a:visited{
+    color:white;
+    text-decoration: none;
   }

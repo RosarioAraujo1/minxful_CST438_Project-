@@ -1,5 +1,6 @@
+from django.conf.urls import url, include
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from minxful_app import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
@@ -11,6 +12,7 @@ urlpatterns = [
     path('forum', views.forum),
     path('admindash', views.admindash),
     path('signup', views.signup),
+    re_path(r'^accounts/', include('accounts.urls')),
 ]
 
 

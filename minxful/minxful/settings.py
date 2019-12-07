@@ -35,7 +35,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+<<<<<<< HEAD
     'django.contrib.staticfiles'
+=======
+    'django.contrib.staticfiles',
+    'accounts',
+>>>>>>> master
 ]
 
 MIDDLEWARE = [
@@ -118,6 +123,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "assets/styles.css"),
+    os.path.join(BASE_DIR, 'assets'),
 )
 

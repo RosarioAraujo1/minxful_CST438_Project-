@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 {% load static %}
-=======
-{% load static from staticfiles %}
-
-
->>>>>>> master
 <!DOCTYPE html>
 
 <html>
 
 <head>
-<<<<<<< HEAD
   {% block head %}
   <title>Minxful</title>
   {% endblock %}
@@ -66,11 +59,6 @@
 
 
 
-
-
-
-
-
   <footer>
     <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
       <div class="navbar-text pull-left">
@@ -96,32 +84,6 @@ put this here and you can delete the block below.-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
   {% endblock %}
-=======
-    <title> Forum </title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-
-<body>
-
-<h1>Posts</h1>
-<div class ="posts">
-    {% for post in posts%}
-        <div class="post">
-            <h2><a href="#">{{post.title_text}}</a></h2>
-            <p>{{post.snippet}}</p>
-            <p>{{post.pub_date}}</p>
-        </div>
-
-    {% endfor %}
-</div>
->>>>>>> master
 
 </body>
-
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> master
 </html>

@@ -39,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles'
 =======
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'accounts',
 >>>>>>> master
+=======
+>>>>>>> c388c4038c99cc65540f8dd25470a3fb2a2b9dd0
 ]
 
 MIDDLEWARE = [

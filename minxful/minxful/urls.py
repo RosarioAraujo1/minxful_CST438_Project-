@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from minxful_app import views
 from django.conf.urls import url, include
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -7,7 +7,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('userdash/', views.userdash),
-    path("", views.homepage),
+    re_path(r'^$', views.homepage),
     path('login', views.login),
     path('forum', views.forum),
     path('admindash', views.admindash),

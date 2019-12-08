@@ -107,3 +107,19 @@ footer {
     color:white;
     text-decoration: none;
   }
+
+  span.click{
+      float: right;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 12px;
+  }
+  span.click:hover{
+    float: right;
+    background-color: #F5F5F5;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+}

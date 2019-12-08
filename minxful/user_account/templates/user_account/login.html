@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<h1>Login</h1>
+
+{% block content %}
+
+<form class="site-form" action="/user_account/login/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Login">
+</form>
+
+{% endblock %}

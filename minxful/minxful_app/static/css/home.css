@@ -33,10 +33,12 @@ h1 {
     margin: -8px;
     padding-bottom: 2em;
 }
+
 .logo{
     font-size: 3em;
     color: white;
 }
+
 .navbar-brand{
     text-decoration: none;
 }

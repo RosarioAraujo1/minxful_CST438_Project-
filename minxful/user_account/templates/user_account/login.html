@@ -1,13 +1,61 @@
+{% load static %}
 <!DOCTYPE html>
+<html lang="en">
 
-<h1>Login</h1>
+<head>
+    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block content %}
+    <link rel="stylesheet" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 
-<form class="site-form" action="/user_account/login/" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Login">
-</form>
+</head>
 
-{% endblock %}
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
+
+                <span class="login100-form-title p-b-55">
+                    Login
+                </span>
+
+                {% block content %}
+
+                <form class="site-form" action="/user_account/login/" method="post">
+                    {% csrf_token  %}
+                    <div class="form"> {{ form }} </div>  
+                    
+                    <div class="contact100-form-checkbox m-l-4">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="container-login100-form-btn p-t-25">
+                        <input type="submit" class="login100-form-btn" value="Login">
+                    </div>
+
+                    <div class="text-center w-full p-t-115">
+                        <span class="txt1">
+                            Not a member?
+                        </span>
+
+                        <a class="txt1 bo1 hov1" href="#">
+                            Sign up now
+                        </a>
+                    </div>
+                </form>
+
+                {% endblock %}
+             
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/login.js' %}"></script>
+
+</body>
+
+</html>

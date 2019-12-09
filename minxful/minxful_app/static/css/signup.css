@@ -1,4 +1,8 @@
-
+.errorlist li{
+  font-size: 10px;
+  color: red;
+  font-style: italic;
+}
 #id_username ,#id_password1, #id_password2{
   white-space: pre-line; 
   font-size: 16px;

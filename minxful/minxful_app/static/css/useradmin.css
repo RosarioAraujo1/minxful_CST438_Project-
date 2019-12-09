@@ -1,0 +1,83 @@
+.welcome{
+    color: white;
+    font-size: 18px;
+}
+button#btnLogout{
+    position: absolute;
+    top:1;
+    right:0;
+    margin:1.5%;
+    background-color:white;
+    padding: 1%;
+    color: #d43f8d;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    
+  }
+  button#btnLogout:hover{
+    position: absolute;
+    top:1;
+    right:0;
+    margin:1.5%;
+    background-color:#d43f8d;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .info p {
+      font-style: italic;
+      padding-left: 2%;
+  }
+  .column1 {
+    float: left;
+    width: 20%;
+    height: 900px; 
+    
+  }
+ .userList {
+      margin-left: 5%;
+  }
+  .userList ul, li a {
+    list-style-type:none;
+   
+  }
+  .userList ul li  {
+    padding-bottom: 10px;
+    text-decoration: none;
+
+  }
+  .userList ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  .userList ul li a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  .userList ul li a:hover {
+    text-decoration: none;
+    color: #d43f8d;
+  }
+ 
+  .column2 {
+    float: left;
+    width: 70%;
+    /* padding: 10px; */
+    height: 700px; 
+  }
+ 
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  #icon{
+      padding-right: 5px;
+  }

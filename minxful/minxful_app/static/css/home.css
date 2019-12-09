@@ -32,11 +32,14 @@ h1 {
     padding: 20px;
     margin: -8px;
     padding-bottom: 2em;
+    /* border-radius: 0 0 2% 2% / 50px; */
 }
+
 .logo{
     font-size: 3em;
     color: white;
 }
+
 .navbar-brand{
     text-decoration: none;
 }

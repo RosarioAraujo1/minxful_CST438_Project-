@@ -2,9 +2,33 @@
     padding: 1%;
     margin: 1%;
     flex: 1 0 auto;
-   
-    /* border: 1px solid pink; */
+
 }
+button#btnLogout{
+    position: absolute;
+    top:1;
+    right:0;
+    margin:1.5%;
+    background-color:white;
+    padding: 1%;
+    color: #d43f8d;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    
+  }
+  button#btnLogout:hover{
+    position: absolute;
+    top:1;
+    right:0;
+    margin:1.5%;
+    background-color:#d43f8d;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+  }
 h1 {
    color:#d43f8d;
    font-size: 2em;

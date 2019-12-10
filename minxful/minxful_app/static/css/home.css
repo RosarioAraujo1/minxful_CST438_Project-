@@ -126,3 +126,43 @@ footer {
     border-radius: 5px;
     padding: 10px;
 }
+form input#commentInput{
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 18px;
+}
+form input#commentSubmit{
+    margin-top: 5px;
+    background-color: #d43f8d;
+    border: 2px solid #d43f8d;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.btn btn-default{
+    background-color: #F5F5F5;
+} 
+#commentBtn{
+    margin-top: 5px;
+    background-color: #F5F5F5;
+    border: 2px solid #F5F5F5;
+    height: 30px;
+    border-radius: 5px; 
+
+}
+.footerText{
+    text-align: center;
+}
+
+.github{
+    /* color: black; */
+    float: right;
+    margin-right: 1%;
+}
+.github a{
+    color: black;
+    float: right;
+    margin-right: 1%;
+    
+}

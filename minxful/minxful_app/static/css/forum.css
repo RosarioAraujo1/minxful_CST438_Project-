@@ -4,6 +4,12 @@
     flex: 1 0 auto;
 
 }
+#subBtn{
+    position: absolute;
+    right: 0;
+    margin-right: 12%;
+}
+
 button#btnLogout{
     background-color:white;
     color: #d43f8d;
@@ -78,6 +84,12 @@ footer {
   }
   .form-group{
       padding: 1%;
+  }
+
+  .form-group textarea {
+    margin: 0 auto;
+    width: 80%;
+    padding: 1%;
   }
   input, textarea {
     display: block;

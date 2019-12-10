@@ -1,5 +1,8 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.safestring import mark_safe
+from django.conf import settings
+import os
 
 
 class Post(models.Model):
@@ -8,13 +11,16 @@ class Post(models.Model):
     title_text = models.CharField(max_length=200)
     body_text = models.TextField()
     pub_date = models.DateTimeField("published")
+    field_name = models.ImageField(upload_to='images/', blank=True)
 
     def __str__(self):
         return "{:^30} \n {:^30}".format(self.title_text, self.body_text)
 
     def snippet(self):
-        return self.body_text[:20] + " ....."
-
+        return self.body_text[:]
+    
+    def image_tag(self):
+        return self.field_name
 
 class Reply(models.Model):
     """ A reply class """
@@ -33,3 +39,5 @@ class Reply(models.Model):
         return "{:<13} {!r} on {} at {}|{} {:^30}".format(
             "replying to:", self.parent, self.pub_date, self.pub_time, nl,
             nl.join([self.body_text]))
+
+  

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -62,3 +63,18 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+
+<h1>Login</h1>
+
+{% block content %}
+
+<form class="site-form" action=/user_account/signup/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Login">
+</form>
+
+{% endblock %}
+>>>>>>> userlogin

@@ -3,11 +3,13 @@ from .models import Post
 
 
 def userdash(request):
-    return render(request, "userdash.html")
+    posts = Post.objects.all().order_by("pub_date")
+    return render(request, "userdash.html", {"posts": posts})
 
 
 def homepage(request):
     posts = Post.objects.all().order_by("pub_date")
+    request.username
     return render(request, "homepage.html", {"posts": posts})
 
 

@@ -6,7 +6,12 @@ from django.conf import settings
 
 app_name = "minxful_app"
 urlpatterns = [
-        path('', views.homepage, name='homepage'),
-        re_path(r'^logout/$', LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
+    path("", views.homepage, name="homepage"),
+    re_path(
+        r"^logout/$",
+        LogoutView.as_view(),
+        {"next_page": settings.LOGOUT_REDIRECT_URL},
+        name="logout",
+    ),
 ]
 urlpatterns += staticfiles_urlpatterns()

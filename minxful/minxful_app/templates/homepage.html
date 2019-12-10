@@ -8,8 +8,10 @@
   <title>Minxful</title>
   {% endblock %}
   <link rel="stylesheet" href="{% static 'css/home.css' %}">
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
 
 <body>
   <header>
@@ -26,8 +28,6 @@
               <div class="nav">
                 <a href="user_account/login">Login</a>
                 <a href="user_account/signup">Signup</a>
-                <!-- <a href="#">?</a>
-                <a href="#">?</a> -->
               </div>
             </div>
           </nav>
@@ -48,8 +48,41 @@
         <span class="click">View More</span>
         <br><br>
         <div>
-          <hr> 
-          Comments here..
+          <hr>
+          <i class="fa fa-comments" aria-hidden="true"></i>
+          <!-- Button to Open the Modal -->
+          <button id="commentBtn" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+            Comments
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Add your comments </h4>
+                  <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <form>
+                    <input id="commentInput" type="text" name="fname"><br>
+                    <input id="commentSubmit" type="submit" class="btn btn-primary" value="Submit">
+                  </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -64,17 +97,20 @@
     <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
       <div class="navbar-text pull-left">
       </div>
-      <div class="navbar-text pull-right">
+      <div class="github">
         <!-- Add in your social media / github links here -->
-        <a href="https://github.com/clarkdatalabs">
-          <i class="fa fa-github-square fa-2x"></i></a>
+        <a href="https://github.com/RosarioAraujo1/minxful_CST438_Project-">
+          <i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
       </div>
       <!--Below is the copyright information for the site. You can fill in your own here.-->
-      <div class="navbar-text pull-left">
+      <div class="footerText">
         &copy; CST438 Software Engineering, 2019
       </div>
     </div>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="{% static 'js/home.js' %}"></script>
 
 </body>
 

@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user_account',
 
-    #'crispy_forms',
+    # 'crispy_forms',
 ]
-#CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,4 +124,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
 )
-

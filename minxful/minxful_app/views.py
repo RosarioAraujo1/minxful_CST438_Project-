@@ -1,25 +1,27 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Post
 
 
-
 def userdash(request):
-    return render(request, 'userdash.html')
+    return render(request, "userdash.html")
 
 
 def homepage(request):
-    posts = Post.objects.all().order_by('pub_date')
-    return render(request, 'homepage.html', {'posts': posts})
+    posts = Post.objects.all().order_by("pub_date")
+    return render(request, "homepage.html", {"posts": posts})
+
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, "login.html")
+
 
 def forum(request):
-    return render(request, 'forum.html')
+    return render(request, "forum.html")
+
 
 def admindash(request):
-    return render(request, 'admin_dash.html')
+    return render(request, "admin_dash.html")
+
 
 def signup(request):
-    return render(request, 'signup.html')
+    return render(request, "signup.html")

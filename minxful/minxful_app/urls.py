@@ -3,8 +3,9 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
+app_name = "minxful_app"
 urlpatterns = [
-        path('', views.index, name='index'),
+        path('', views.homepage, name='homepage'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

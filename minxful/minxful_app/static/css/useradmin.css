@@ -2,6 +2,16 @@
     color: white;
     font-size: 18px;
 }
+.post {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  padding: 0.5em;
+  padding: 20px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 button#btnLogout{
     /* position: absolute;
     top:1;

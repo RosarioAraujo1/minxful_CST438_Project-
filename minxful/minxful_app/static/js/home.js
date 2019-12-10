@@ -3,5 +3,6 @@ $(document).ready(function(){
     $(".btn btn-default").click(function(){
         $('.modal').show();
     });
+    
 });
 

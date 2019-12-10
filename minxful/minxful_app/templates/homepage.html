@@ -70,10 +70,14 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                  <form>
+                    {% block content %}
+                  <form class="site-form" action="/" method="submit">
+                    {% csrf_token  %}
+                    <div class="form"> {{ form }} </div>
                     <input id="commentInput" type="text" name="fname"><br>
-                    <input id="commentSubmit" type="submit" class="btn btn-primary" value="Submit">
+                    <input id="commentSubmit" type="submit" class="btn btn-primary" value="Post">
                   </form>
+                  {% endblock %}
                 </div>
 
                 <!-- Modal footer -->

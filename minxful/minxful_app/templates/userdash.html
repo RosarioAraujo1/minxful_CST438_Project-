@@ -44,10 +44,12 @@
                 <div class="userList">
                     <h4> <i class="fa fa-user" aria-hidden="true" id="icon"></i> User Dashboard</h4>
                     <ul>
-                        <li><i id="icon" class="fa fa-pencil-square-o" aria-hidden="true"></i><a href="#" id="yourPost">Your Posts</a>
+                        <li><i id="icon" class="fa fa-pencil-square-o" aria-hidden="true"></i><a href="#"
+                                id="yourPost">Your Posts</a>
                         </li>
 
-                        <li><i id="icon" class="fa fa-comments-o" aria-hidden="true"></i><a href="#" id="yourcmt">Your Comments</a>
+                        <li><i id="icon" class="fa fa-comments-o" aria-hidden="true"></i><a href="#" id="yourcmt">Your
+                                Comments</a>
                         </li>
                     </ul>
                 </div>
@@ -57,17 +59,22 @@
                 <h1> Welcome to your User Dashboard</h1>
                 <div class="info">
                     <p> Here you can explore and follow the posts you have published! </p>
-                    <div class="post" id="userPost"> 
-                        Posts for user show be displayed here from database
-                        <!-- {% for post in posts %}
-                        {{ post.f_name}}
-                        {{ post.l_name }}
-                        {{ post.student_number }}
-                        {{ post.dob }}
-                        {% endfor %} -->
+                    <div class="post" id="userPost">
+                        <!-- Posts for user show be displayed here from database -->
+                        <div class="posts">
+                            {% for post in posts%}
+                            <div class="post">
+                                <h2><a href="#">{{post.title_text}}</a></h2>
+                                <p>{{post.snippet}}</p>
+                                <!-- <img alt="image preview" src="/{{post.image_tag}}"><br><br> -->
+                                <span class="datepost">{{post.pub_date}}</span><br><br>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
                     </div>
                     <div class="post" id="comment">
-                            Comments for user show be displayed here from database
+                        Comments for user show be displayed here from database
                     </div>
                 </div>
             </div>
@@ -76,24 +83,6 @@
 
 
     </div>
-
-
-
-    <footer>
-        <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
-            <div class="navbar-text pull-left">
-            </div>
-            <div class="navbar-text pull-right">
-                <!-- Add in your social media / github links here -->
-                <a href="https://github.com/clarkdatalabs">
-                    <i class="fa fa-github-square fa-2x"></i></a>
-            </div>
-            <!--Below is the copyright information for the site. You can fill in your own here.-->
-            <div class="navbar-text pull-left">
-                &copy; CST438 Software Engineering, 2019
-            </div>
-        </div>
-    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="{% static 'js/userdash.js' %}"></script>

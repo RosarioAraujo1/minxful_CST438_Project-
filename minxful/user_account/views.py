@@ -15,7 +15,7 @@ def signup_view(request):
             return HttpResponseRedirect("http://127.0.0.1:8000/")
     else:
         form = UserCreationForm()
-    return render(request, "user_account/signup.html", {"form": form})
+        return render(request, "user_account/signup.html", {"form": form})
 
 
 def login_view(request):

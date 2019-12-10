@@ -24,7 +24,10 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return HttpResponseRedirect("http://127.0.0.1:8000/")
+            if request.user.is_superuser:
+                return HttpResponseRedirect("http://127.0.0.1:8000/admin")
+            else:
+                return HttpResponseRedirect("http://127.0.0.1:8000/")
     else:
         form = AuthenticationForm()
     return render(request, 'user_account/login.html', {'form': form})

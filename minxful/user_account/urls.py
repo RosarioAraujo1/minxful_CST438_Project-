@@ -1,5 +1,5 @@
 from . import views
-from django.urls import re_path, include
+from django.urls import path, re_path, include
 
 app_name = "user_account"
 
@@ -17,4 +17,5 @@ urlpatterns = [
         include(
             "minxful_app.urls",
             namespace="minxful_app")),
+    path("logout", views.logout_view, name="logout"),
         ]

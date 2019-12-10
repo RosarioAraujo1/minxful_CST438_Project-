@@ -5,6 +5,23 @@
    
     /* border: 1px solid pink; */
 }
+
+button#btnLogout{
+    background-color:white;
+    color: #d43f8d;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    
+  }
+  button#btnLogout:hover{
+    background-color:#d43f8d;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
 h1 {
    color:#d43f8d;
    font-size: 2em;

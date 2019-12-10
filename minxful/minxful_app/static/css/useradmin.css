@@ -3,12 +3,12 @@
     font-size: 18px;
 }
 button#btnLogout{
-    position: absolute;
+    /* position: absolute;
     top:1;
     right:0;
-    margin:1.5%;
+    margin:1.5%; */
     background-color:white;
-    padding: 1%;
+    /* padding: 1%; */
     color: #d43f8d;
     font-weight: bold;
     border-radius: 5px;
@@ -16,12 +16,11 @@ button#btnLogout{
     
   }
   button#btnLogout:hover{
-    position: absolute;
+    /* position: absolute;
     top:1;
     right:0;
-    margin:1.5%;
+    margin:1.5%; */
     background-color:#d43f8d;
-    padding: 1%;
     color: white;
     font-weight: bold;
     border-radius: 5px;

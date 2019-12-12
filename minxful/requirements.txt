@@ -1,5 +1,2 @@
-<<<<<<< HEAD
+gunicorn==20.0.4
 psycopg2==2.8.4
-=======
-ipython==8.3.0
->>>>>>> 90250a012bf37ad2b6e018657caff5b9d60479e2

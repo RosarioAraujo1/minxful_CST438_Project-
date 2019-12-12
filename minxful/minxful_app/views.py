@@ -9,7 +9,6 @@ def userdash(request):
 
 def homepage(request):
     posts = Post.objects.all().order_by("pub_date")
-    request.username
     return render(request, "homepage.html", {"posts": posts})
 
 

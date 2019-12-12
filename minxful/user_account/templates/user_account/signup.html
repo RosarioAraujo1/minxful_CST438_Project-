@@ -29,7 +29,14 @@
                 <form class="site-form" action="/user_account/signup/" method="post">
                     {% csrf_token %}
                     <div class="singupForm">{{ form }}</div>
-
+                    {% endblock %}
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                            {% endfor %}
+                    </ul>
+                    {% endif %}
                     <div class="flex-m w-full p-b-33">
                         <div class="contact100-form-checkbox">
                             <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
@@ -56,13 +63,13 @@
                     </div>
 
                 </form>
-                {% endblock %}
+                
 
             </div>
         </div>
     </div>
 
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
 
 </body>
 

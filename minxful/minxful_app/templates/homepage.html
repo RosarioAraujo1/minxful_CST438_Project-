@@ -45,15 +45,15 @@
     <h1>Popular Posts </h1>
     <div class="posts">
       {% for post in posts%}
-      {% if post.user_name == user.username %}
+      <!-- {% if post.user_name == user.username %} -->
       <div class="post">
         <h2><a href="#">{{post.title_text}}</a></h2>
         <p>{{post.snippet}}</p>
-        <span class="datepost">{{post.pub_date}}</span><br><br>
+        <!-- <span class="datepost">{{post.pub_date}}</span><br><br> -->
         <span class="click">View More</span>
         <br><br>
         <div>
-            {% endif %}
+            <!-- {% endif %} -->
             {% endfor %}
           <hr>
           <i class="fa fa-comments" aria-hidden="true"></i>

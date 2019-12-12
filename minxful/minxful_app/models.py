@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     """ a post class """
 
-    username = models.CharField(max_length=20)
+    # username = models.CharField(max_length=20)
     title_text = models.CharField(max_length=200)
     body_text = models.TextField()
     pub_date = models.DateTimeField("published")

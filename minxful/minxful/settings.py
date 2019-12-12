@@ -74,13 +74,23 @@ WSGI_APPLICATION = 'minxful.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'minxful_data',
+#         'USER': 'postgres',
+#         'PASSWORD': '123456',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'minxful_data',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': '127.0.0.1',
+        'NAME': 'dbvdjuoqhoe7po',
+        'USER': 'tczqiuxanoosef',
+        'PASSWORD': '6d411eacec7238a7fc4bef7a777182f1531b09dbfc66abcbb35d99ac642c0516',
+        'HOST': 'ec2-174-129-24-148.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }

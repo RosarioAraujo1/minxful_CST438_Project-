@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
+from django.contrib import messages
 
 
 # Create your views here.
@@ -12,7 +13,11 @@ def signup_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Account created successfully')
             return HttpResponseRedirect("http://127.0.0.1:8000/")
+        else:
+            messages.error(request, 'Failed to signup!')
+            return render(request, "user_account/signup.html", {"form": form}) 
     else:
         form = UserCreationForm()
         return render(request, "user_account/signup.html", {"form": form})

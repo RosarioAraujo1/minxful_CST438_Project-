@@ -1,7 +1,13 @@
 .errorlist li{
-  font-size: 10px;
+  font-size: 12px;
   color: red;
   font-style: italic;
+}
+ul.messages li.error{
+  font-size: 16px;
+  color: red;
+  font-style: italic;
+  text-align: center;
 }
 #id_username ,#id_password1, #id_password2{
   white-space: pre-line; 
@@ -38,6 +44,7 @@
   font-size: 12px;
   color: lightcoral;
   font-style: italic;
+  display: none;
 }
 label{
   display: block; 

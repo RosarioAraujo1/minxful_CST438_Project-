@@ -94,19 +94,40 @@ footer {
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
- .btn{
+ #btn{
     background-color: #d43f8d;
     border-radius: 5px;
     width: 85px;
     height: 35px;
     font-size: 16px;
     color: white;
+    margin-top: 1%;
  }
  textarea{
      height: 200px;
  }
+#id_title_text{
+    width: 80%;
+    height: 20px;
+    margin-bottom: 1%;
+    /* margin: 0 auto; */
+}
+#id_body_text{
+    width: 80%;
+    margin-top: 1%;
+    /* margin: 0 auto; */
+}
+form.site-form label{
+    font-size: 22px;
+    margin-top: 1%;
+    margin-bottom: 1%;
 
-
+}
+h2.title{
+    margin-left: 7%;
+    font-size: 32px;
+    margin-top: 3%;
+}
 Header
  .nav {
     display: inline;  

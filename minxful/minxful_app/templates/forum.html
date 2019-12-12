@@ -1,80 +1,25 @@
 {% load static %}
+
 <!DOCTYPE html>
-
 <html>
-
-<head>
-    {% block head %}
-    <title>Minxful</title>
-    {% endblock %}
-    <link rel="stylesheet" href="{% static 'css/forum.css' %}">
-  
-
 <body>
-    <header>
-        <div class="container clearfix">
 
-            <div class="navbar-wrapper">
-                <div class="container">
-                    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar_whole">
+{% block content %}
 
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="/">
-                                <img class="img-responsive" src="">
-                                <span class="logo"> MINXFUL </span>
-                            </a>
-                            <div class="nav">
-                                <button id="btnLogout"> Log out </button>
-                                <!-- <a href="user_account/login">Login</a>
-                                <a href="user_account/signup">Signup</a> -->
-                                <!-- <a href="#">?</a>
-                                <a href="#">?</a> -->
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+<div class="create-article">
+    <h2>yes</h2>
+    <form class="site-form" action="" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+        {{form}}
+<!--        <input target="_blank" onclick="window.location.href = '/';" type="submit" value="Create" />-->
+        <input target="_blank" id="btn" type ="submit" value="Create">
+    </form>
+</div>
 
-    <div class="content">
-        <!-- <button id="btnLogout"> Log out </button> -->
-        <form>
-            <div class="form-group">
-                <label for="title">Title</label><br>
-                <input type="title" class="form-control" id="title" placeholder="Enter Title">
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject</label><br>
-                <input type="text" class="form-control" id="subject" placeholder="Enter Subject">
-            </div>
-            <div class="form-group">
-                <textarea rows="8" placeholder="Your message here..." maxlength="150"></textarea>
-            </div>
+{% endblock %}
 
-            <button type="submit" class="btn btn-primary" class="btn">Submit</button>
-        </form>
-
-
-    </div>
-
-
-
-    <footer>
-        <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
-            <div class="navbar-text pull-left">
-            </div>
-            <div class="navbar-text pull-right">
-                <!-- Add in your social media / github links here -->
-                <a href="https://github.com/clarkdatalabs">
-                    <i class="fa fa-github-square fa-2x"></i></a>
-            </div>
-            <!--Below is the copyright information for the site. You can fill in your own here.-->
-            <div class="navbar-text pull-left">
-                &copy; CST438 Software Engineering, 2019
-            </div>
-        </div>
-    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="{% static 'js/forum.js' %}"></script>
 
 </body>
 

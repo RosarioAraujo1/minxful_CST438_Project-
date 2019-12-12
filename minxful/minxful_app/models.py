@@ -4,15 +4,13 @@ import django.contrib.auth.models as dcam
 from django.contrib.auth.models import User
 
 
-
 class Post(models.Model):
     """ a post class """
 
-    # username = models.CharField(max_length=20)
-    title_text = models.CharField(max_length=200)
+    title_text = models.TextField(default=None)
     body_text = models.TextField()
-    pub_date = models.DateTimeField("published")
-    # author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+    ##pub_date = models.DateTimeField("published", default=None)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
 
     def __str__(self):
         return "{:^30} \n {:^30}".format(self.title_text, self.body_text)

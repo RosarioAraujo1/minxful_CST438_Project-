@@ -1,1 +1,1 @@
-ipython==3.7.5
+ipython==python-3.8.0

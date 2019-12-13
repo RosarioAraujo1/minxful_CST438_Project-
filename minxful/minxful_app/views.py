@@ -3,30 +3,18 @@ from .models import Post
 from django.contrib.auth.decorators import login_required
 from . import forms
 from django.http import HttpResponseRedirect
-
-
 def userdash(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(author=request.user).values()
     return render(request, "userdash.html", {"posts": posts})
-
-
 def homepage(request):
     posts = list(Post.objects.all())
     return render(request, "homepage.html", {"posts": posts[::-1]})
-
-
 def login(request):
     return render(request, "login.html")
-
-
 def admindash(request):
     return render(request, "admin_dash.html")
-
-
 def signup(request):
     return render(request, "signup.html")
-
-
 @login_required(login_url='/user_account/login/')
 def forum(request):
     if request.method == 'POST':
@@ -36,7 +24,6 @@ def forum(request):
             instance.author = request.user
             instance.save()
             return HttpResponseRedirect("http://127.0.0.1:8000")
-
     else:
         form = forms.CreatePost()
     return render(request, 'forum.html', {'form': form})

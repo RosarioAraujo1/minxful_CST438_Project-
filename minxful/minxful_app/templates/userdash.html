@@ -1,8 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-
 <html>
-
 <head>
     {% block head %}
     <title>Minxful</title>
@@ -10,16 +8,12 @@
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/useradmin.css' %}">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-
 <body>
     <header>
         <div class="container clearfix">
-
             <div class="navbar-wrapper">
                 <div class="container">
                     <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar_whole">
-
                         <div class="navbar-header">
                             <a class="navbar-brand" href="/">
                                 <span class="logo"> MINXFUL </span>
@@ -34,9 +28,7 @@
                 </div>
             </div>
         </div>
-
     </header>
-
     <div class="content">
         <!-- <button id="btnLogout"> Log out </button> -->
         <div class="row">
@@ -46,12 +38,10 @@
                     <ul>
                         <li><i id="icon" class="fa fa-pencil-square-o" aria-hidden="true"></i><a href="#" id="yourPost">Your Posts</a>
                         </li>
-
                         <li><i id="icon" class="fa fa-comments-o" aria-hidden="true"></i><a href="#" id="yourcmt">Your Comments</a>
                         </li>
                     </ul>
                 </div>
-
             </div>
             <div class="column2">
                 <h1> Welcome to your User Dashboard</h1>
@@ -59,14 +49,12 @@
                     <p> Here you can explore and follow the posts you have published! </p>
                     <div class="post" id="userPost"> 
                         {% for post in posts %}
-                        {% if post.username == user.username %}
+                        {% if post.username == author.username %}
                         <div class="post">
                             <h2><a href="#">{{post.title_text}}</a></h2>
                             <p>{{post.snippet}}</p>
-                            <span
-                                class="datepost">{{post.pub_date}}</span><br><br>
+<!--                                class="datepost">{{post.pub_date}}</span><br><br>-->
                                 <span class="click">View More</span>
-
                         </div>
                         {% endif %}
                         {% endfor %}
@@ -76,13 +64,7 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
-
-
     <footer>
         <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
             <div class="navbar-text pull-left">
@@ -98,9 +80,7 @@
             </div>
         </div>
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="{% static 'js/userdash.js' %}"></script>
 </body>
-
 </html>

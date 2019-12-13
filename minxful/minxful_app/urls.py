@@ -1,4 +1,5 @@
 from . import views
+from .. import user_account
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.auth.views import LogoutView
 from django.conf import settings
@@ -18,7 +19,7 @@ urlpatterns = [
     path("forum", views.forum),
     path("admindash", views.admindash),
     path("signup", views.signup),
-    url(r"^user_account/", include("../user_account/urls.py")),
+    url(r"^user_account/", include("user_account.urls")),
     url(
         r"^logout/$",
         LogoutView.as_view(),

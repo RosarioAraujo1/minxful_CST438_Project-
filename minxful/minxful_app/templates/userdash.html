@@ -56,20 +56,16 @@
             <div class="column2">
                 <h1> Welcome to your User Dashboard</h1>
                 <div class="info">
-                    <p> Here you can explore and follow the posts you have published! </p>
-                    <div class="post" id="userPost"> 
+                    <p> Here you can explore and follow the posts you have
+                    published!</p> 
+                    <div class="posts">
                         {% for post in posts %}
-                        {% if post.username == user.username %}
-                        <div class="post">
-                            <h2><a href="#">{{post.title_text}}</a></h2>
-                            <p>{{post.snippet}}</p>
-                            <span
-                                class="datepost">{{post.pub_date}}</span><br><br>
-                                <span class="click">View More</span>
-
+                        <div class="post>
+                                        {{post.author}}
+                                        {{post.title_text}}
+                                        {{post.body_text}}
+                        {% endfor%}
                         </div>
-                        {% endif %}
-                        {% endfor %}
                     <div class="post" id="comment">
                             Comments for user show be displayed here from database
                     </div>
@@ -89,7 +85,7 @@
             </div>
             <div class="navbar-text pull-right">
                 <!-- Add in your social media / github links here -->
-                <a href="https://github.com/clarkdatalabs">
+                <a href="https://github.com/">
                     <i class="fa fa-github-square fa-2x"></i></a>
             </div>
             <!--Below is the copyright information for the site. You can fill in your own here.-->

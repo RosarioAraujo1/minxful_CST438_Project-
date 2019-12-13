@@ -6,7 +6,14 @@ from . import forms
 
 def userdash(request):
     posts = Post.objects.all()
-    return render(request, "userdash.html", {"posts": posts})
+    d = dict()
+    for post in posts:
+        if str(post.author) in d.keys():
+            d.get(str(post.author)).append(post)
+        else:
+            d[str(post.author)] = [post]
+    return render(request, "userdash.html",
+                  {"posts": d.get(str(request.user))})
 
 
 def homepage(request):

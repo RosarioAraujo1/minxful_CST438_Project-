@@ -12,10 +12,5 @@ urlpatterns = [
         r"^login/$",
         views.login_view,
         name="login"),
-    re_path(
-        r"^",
-        include(
-            "minxful_app.urls",
-            namespace="minxful_app")),
     path("logout", views.logout_view, name="logout"),
         ]

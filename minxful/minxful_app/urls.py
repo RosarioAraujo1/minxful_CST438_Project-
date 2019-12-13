@@ -1,15 +1,11 @@
 from . import views
-from .. import user_account
+from .user_account import urls
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.auth.views import LogoutView
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include, re_path
-# from minxful_app import views
 from django.conf.urls import url
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.contrib.auth.views import LogoutView
-from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -19,7 +15,7 @@ urlpatterns = [
     path("forum", views.forum),
     path("admindash", views.admindash),
     path("signup", views.signup),
-    url(r"^user_account/", include("user_account.urls")),
+    url(r"^user_account/", include(urls)),
     url(
         r"^logout/$",
         LogoutView.as_view(),
@@ -34,7 +30,6 @@ urlpatterns = [
         name="logout",
     ),
 ]
-
 
 urlpatterns += staticfiles_urlpatterns()
 app_name = "minxful_app"

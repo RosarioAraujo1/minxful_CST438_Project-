@@ -1,8 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .models import Post
 from django.contrib.auth.decorators import login_required
 from . import forms
-from django.http import HttpResponseRedirect
 
 
 def userdash(request):
@@ -35,8 +34,7 @@ def forum(request):
             instance = form.save(commit=False)
             instance.author = request.user
             instance.save()
-            return HttpResponseRedirect("http://127.0.0.1:8000")
-
+            return homepage(request)
     else:
         form = forms.CreatePost()
     return render(request, 'forum.html', {'form': form})

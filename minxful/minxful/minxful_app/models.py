@@ -4,7 +4,15 @@ import django.contrib.auth.models as dcam
 from django.contrib.auth.models import User
 
 
-class Post(models.Model):
+
+class BaseModel(models.Model):
+
+    class Meta:
+        abstract = True  # specify this model as an Abstract Model
+        app_label = 'minxful_app'
+
+
+class Post(BaseModel):
     """ a post class """
 
     title_text = models.TextField(default=None)
@@ -19,7 +27,7 @@ class Post(models.Model):
         return self.body_text[:20] + " ....."
 
 
-class Reply(models.Model):
+class Reply(BaseModel):
     """ A reply class """
     parent = models.ForeignKey(Post, on_delete=models.CASCADE, default=1)
     body_text = models.CharField(default="", max_length=1000)

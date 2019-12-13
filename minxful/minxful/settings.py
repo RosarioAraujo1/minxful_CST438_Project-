@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'minxful_app',
+    'minxful.minxful_app',
     'user_account',
 
     # 'crispy_forms',

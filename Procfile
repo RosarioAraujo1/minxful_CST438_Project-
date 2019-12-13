@@ -1,1 +1,1 @@
-web: gunicorn minxful.wsgi app:minxful
+web: gunicorn .wsgi app:minxful

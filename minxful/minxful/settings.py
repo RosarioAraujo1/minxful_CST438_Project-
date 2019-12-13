@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'minxful.urls'
+ROOT_URLCONF = 'minxful.minxful_app.urls'
 
 TEMPLATES = [
     {

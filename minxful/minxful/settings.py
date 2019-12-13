@@ -28,7 +28,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
-    'minxful.apps.MinxfulAppConfig',
+    'minxful.apps.minxful_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

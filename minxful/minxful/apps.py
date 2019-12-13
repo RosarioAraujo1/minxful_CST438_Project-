@@ -1,4 +1,5 @@
-from django.apps import AppConfig
+from minxful_app import apps
 
-class MinxfulAppConfig(AppConfig):
-    name = 'minxful_app'
+
+class minxful_app(apps.MinxfulAppConfig):
+    verbose_name = 'minxful_app'

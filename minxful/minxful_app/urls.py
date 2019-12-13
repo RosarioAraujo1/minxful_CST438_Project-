@@ -18,7 +18,7 @@ urlpatterns = [
     path("forum", views.forum),
     path("admindash", views.admindash),
     path("signup", views.signup),
-    url(r"^user_account/", include("user_account.urls")),
+    url(r"^user_account/", include("../user_account/urls.py")),
     url(
         r"^logout/$",
         LogoutView.as_view(),

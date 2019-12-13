@@ -1,1 +1,2 @@
-ipython==python-3.8.0
+gunicorn==20.0.4
+psycopg2==2.8.4

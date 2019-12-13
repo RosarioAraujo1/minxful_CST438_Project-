@@ -6,6 +6,21 @@
     /* border: 1px solid pink; */
 }
 
+.viewPost{
+    font-style: italic;
+    font-weight: bold;
+}
+.viewPost:hover{
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+
 button#btnLogout{
     background-color:white;
     color: #d43f8d;

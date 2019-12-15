@@ -57,21 +57,22 @@
                 <h1> Welcome to your User Dashboard</h1>
                 <div class="info">
                     <p> Here you can explore and follow the posts you have
-                    published!</p> 
+                        published!</p>
+
                     <div class="posts">
-                        {% for post in posts %}
-                        <div class="post>
-                                        {{post.author}}
-                                        {{post.title_text}}
-                                        {{post.body_text}}
-                        {% endfor%}
+                        {% for post in posts%}
+                        <div class="post">
+                            <p>{{post.author}}</p>
+                            <h2><a href="#">{{post.title_text}}</a></h2>
+                            <p>{{post.snippet}}</p>
+                            </div>
                         </div>
-                    <div class="post" id="comment">
-                            Comments for user show be displayed here from database
+
+                        {% endfor %}
                     </div>
+
                 </div>
             </div>
-        </div>
 
 
 
